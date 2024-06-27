@@ -4,7 +4,6 @@ import logo from "../Assets/dish.png"
 import menu from "../Assets/menu.png"
 import close from "../Assets/close.png"
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import cart from '../Assets/cartt.png'
 import { useSelector } from 'react-redux';
 
 function RootLayout(props) {
@@ -84,7 +83,6 @@ function RootLayout(props) {
                                 {user ? <span className=' flex  items-center justify-center rounded-full text-green-500  font-bold bg-slate-200  w-8 h-8 text-xl mt-4'>{user.firstname.charAt(0)}</span> : <Link to="/login"> <button className=' bg-slate-200 	text-2xl  text-orange-500 hover:text-green-500  transition-colors px-4 rounded-md mt-4' type='submit'>Login</button></Link>}
                             </div>
                             <div className='flex flex-row items-center'>
-                                <Link to={"/cart"}><img className='w-8' src={cart} alt="" /></Link>
                                 <span className='text-red-400 font-bold mb-8'>0</span>
                                 <button className='lg:hidden ' onClick={() => { setDrawerVisible(true) }}>
                                     <img className='w-6 ' src={menu} alt="menu" />

@@ -9,7 +9,7 @@ export async function loader({ params }) {
     return { menu }
 }
 function cartPage(props) {
-    const { menu } = useLoaderData()  
+    const { menu } = useLoaderData()    
     
     console.log(menu)
     return (
