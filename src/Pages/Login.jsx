@@ -19,7 +19,9 @@ function LoginPage(props) {
         const email = form['email'].value
         const password = form['password'].value
 
-        axios.post('http://localhost:3000/users/login', { email, password }, { withCredentials: true })
+        // axios.post('http://localhost:3000/users/login', { email, password }, { withCredentials: true })
+
+        axios.post('http://localhost:3000/api/users/login', { email, password }, { withCredentials: true })
             .then(data => {
                 const user = (data.data.user)
                 console.log(user)

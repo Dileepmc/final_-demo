@@ -13,7 +13,9 @@ function ContactPage(props) {
         const email = form['email'].value
         const message = form['message'].value
 
-        axios.post('http://localhost:3000/contact', { name, email, message })
+      //  axios.post('http://localhost:3000/contact', { name, email, message })
+
+        axios.post(`${import.meta.env.VITE_API_URL}/contact`, { name, email, message })
             .then(data => {
                 const datas = (data)
                 console.log(datas)

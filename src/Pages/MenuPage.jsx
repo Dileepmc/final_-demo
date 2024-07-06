@@ -5,7 +5,9 @@ import search from '../Assets/search.png'
 
 
 export async function loader() {
-    const res = await axios.get('http://localhost:3000/menus')
+    // const res = await axios.get('http://localhost:3000/menus')
+
+    const res = await axios.get('http://localhost:3000/api/menus')
     const data = res.data
     return { data }
 }
@@ -20,7 +22,7 @@ function MenuPage(props) {
     );
 
     useEffect(() => {
-        axios.post('http://localhost:3000/users/verify', {}, { withCredentials: true })
+        axios.post('http://localhost:3000/api/users/verify', {}, { withCredentials: true })
             .then((data) => {
                 console.log("logged in")
             })
